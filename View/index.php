@@ -48,7 +48,7 @@
                         </select>
                     </div>
 
-                    <button type="submit" name="submit" class="btn btn-primary">Posalji</button>
+                    <button type="submit" name="submit" class="btn btn-primary"> Proveri </button>
               </form>
           </div>
       </div>

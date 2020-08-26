@@ -28,12 +28,12 @@
   $telefon = htmlentities($telefon);
   $telefon = trim($telefon);
   $telefon =  str_replace("-", "",$telefon);
-
+  $telefon =  strval($telefon);
 
   $omiljena_boja = $_POST['omiljena_boja'];
 
 // Proverava da li je sve popunjeno i da li su svi karakteri imena i prezimena slova i da li telefon sadrzi samo brojeve
-if( $ime !== '' &&  $prezime !== ''   && $jmbg !== '' && ctype_alpha($ime) && ctype_alpha($prezime) && is_numeric($telefon) ) {
+if( $ime !== '' &&  $prezime !== ''   && $jmbg !== '' && ctype_alpha($ime) && ctype_alpha($prezime) && is_numeric($telefon) && strlen($telefon)>6) {
   $podaci_ispravni = 1;
 
   if (strlen($ime) !== 1 && strlen($prezime) !== 1) {

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>JMBG validator</title>
   </head>
-  <body>
+  <body style="background-color:#7faaf0;">
       <div class="text-center">
         <div id="poruka">
 

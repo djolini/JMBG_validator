@@ -35,6 +35,11 @@
                         <label for="jmbg"> JMBG </label>
                         <input type="text" class="form-control" placeholder="Unesite svoj JMBG" name="jmbg" required>
                     </div>
+                
+                    <div class="form-group">
+                        <label for="telefon"> Broj telefona </label>
+                        <input type="text" class="form-control" placeholder="Unesite svoj broj telefona (bez +)" name="telefon" required>
+                    </div>
 
                     <div class="form-group">
                         <label for="sel1">Odaberite Vasu omiljenu boju</label>

@@ -2,35 +2,39 @@
 
 
 // ime sanitizacija i validacija
-  $ime = $_POST['ime'];
-  $ime = stripslashes($ime);
-  $ime = htmlentities($ime);
+   $ime = $_POST['ime'];
+   $ime = stripslashes($ime);
+   $ime = htmlentities($ime);
+   $ime = trim($ime);
 
 // prezime sanitizacija i validacija
-  $prezime = $_POST['prezime'];
-  $prezime = stripslashes($prezime);
-  $prezime = htmlentities($prezime);
+   $prezime = $_POST['prezime'];
+   $prezime = stripslashes($prezime);
+   $prezime = htmlentities($prezime);
+   $prezime = trim($prezime);
 
  // email sanitizacija i validacija
-  $email = $_POST['email'];
-  $email = stripslashes($email);
-  $email = htmlentities($email);
+    $email = $_POST['email'];
+    $email = stripslashes($email);
+    $email = htmlentities($email);
+    $email = trim($email);
+
+ // broj telefona sanitizacija i validacija
+    $telefon = $_POST['telefon'];
+    $telefon = stripslashes($telefon);
+    $telefon = htmlentities($telefon);
+    $telefon = trim($telefon);
+    $telefon =  str_replace("-", "",$telefon);
+    $telefon =  str_replace("+", "",$telefon);
 
 
 // jmbg sanitizacija i validacija
-  $jmbg = $_POST['jmbg'];
-  $jmbg = stripslashes($jmbg);
-  $jmbg = htmlentities($jmbg);
+   $jmbg = $_POST['jmbg'];
+   $jmbg = stripslashes($jmbg);
+   $jmbg = htmlentities($jmbg);
+   $jmbg = trim($jmbg);
 
- // broj telefona sanitizacija i validacija
-  $telefon = $_POST['telefon'];
-  $telefon = stripslashes($telefon);
-  $telefon = htmlentities($telefon);
-  $telefon = trim($telefon);
-  $telefon =  str_replace("-", "",$telefon);
-  $telefon =  strval($telefon);
-
-  $omiljena_boja = $_POST['omiljena_boja'];
+   $omiljena_boja = $_POST['omiljena_boja'];
 
 // Proverava da li je sve popunjeno i da li su svi karakteri imena i prezimena slova i da li telefon sadrzi samo brojeve
 if( $ime !== '' &&  $prezime !== ''   && $jmbg !== '' && ctype_alpha($ime) && ctype_alpha($prezime) && is_numeric($telefon) && strlen($telefon)>6) {

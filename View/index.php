@@ -25,6 +25,11 @@
                         <label for="prezime"> Prezime </label>
                         <input type="text" class="form-control" placeholder="Unesite Vase prezime" name="prezime" required>
                     </div>
+                
+                    <div class="form-group">
+                        <label for="email"> E-mail </label>
+                        <input type="email" class="form-control" placeholder="Unesite Vas mejl" name="email" required>
+                    </div>
 
                     <div class="form-group">
                         <label for="jmbg"> JMBG </label>

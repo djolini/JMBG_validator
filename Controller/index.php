@@ -11,6 +11,11 @@
   $prezime = stripslashes($prezime);
   $prezime = htmlentities($prezime);
 
+ // email sanitizacija i validacija
+  $email = $_POST['email'];
+  $email = stripslashes($email);
+  $email = htmlentities($email);
+
 
 // jmbg sanitizacija i validacija
   $jmbg = $_POST['jmbg'];
@@ -26,7 +31,7 @@ if( $ime !== '' &&  $prezime !== ''   && $jmbg !== '' && ctype_alpha($ime) && ct
   if (strlen($ime) !== 1 && strlen($prezime) !== 1) {
     $podaci_ispravni = 1;
 
-      if (filter_var($jmbg, FILTER_VALIDATE_INT)) {
+      if (filter_var($jmbg, FILTER_VALIDATE_INT) && filter_var($email, FILTER_VALIDATE_EMAIL) ) {
           $podaci_ispravni = 1;
       } else {
           $podaci_ispravni = 0;
